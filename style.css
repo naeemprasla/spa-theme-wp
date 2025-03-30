@@ -1,0 +1,114 @@
+/*
+Theme Name: SPA REST API Theme
+Theme URI: https://example.com/spa-theme
+Author: Your Name
+Author URI: https://example.com
+Description: WordPress SPA using REST API and ACF Repeater fields
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: spa-theme
+*/
+
+/* Base Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-header, .site-footer {
+    background: #f5f5f5;
+    padding: 1rem;
+}
+
+.site-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Loading States */
+#spa-content.loading {
+    position: relative;
+    min-height: 200px;
+}
+
+#spa-content.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    border-top-color: #0073aa;
+    animation: spin 1s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Error States */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    background: #ffebee;
+    border-radius: 4px;
+}
+
+/* No-JS Fallback */
+.no-js-warning {
+    display: none;
+    padding: 1rem;
+    background: #f8d7da;
+    color: #721c24;
+    text-align: center;
+}
+
+.no-js .no-js-warning {
+    display: block;
+}
+
+.no-js .spa-enhanced {
+    display: none !important;
+}
+
+/* Section Styles */
+.hero-section {
+    padding: 4rem 0;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.content-section {
+    padding: 2rem 0;
+}
+
+.card-grid-section {
+    padding: 2rem 0;
+}
+
+.card-grid-section .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

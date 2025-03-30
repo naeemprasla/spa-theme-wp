@@ -1,0 +1,118 @@
+{
+    "key": "group_sections",
+    "title": "Page Sections",
+    "fields": [
+      {
+        "key": "field_sections",
+        "label": "Sections",
+        "name": "sections",
+        "type": "flexible_content",
+        "layouts": {
+          "layout_hero": {
+            "key": "layout_hero",
+            "name": "hero_section",
+            "label": "Hero Section",
+            "sub_fields": [
+              {
+                "key": "field_hero_title",
+                "label": "Title",
+                "name": "title",
+                "type": "text"
+              },
+              {
+                "key": "field_hero_subtitle",
+                "label": "Subtitle",
+                "name": "subtitle",
+                "type": "text"
+              },
+              {
+                "key": "field_hero_background",
+                "label": "Background Image",
+                "name": "background_image",
+                "type": "image",
+                "return_format": "array"
+              },
+              {
+                "key": "field_hero_button",
+                "label": "Button",
+                "name": "button_link",
+                "type": "link",
+                "return_format": "array"
+              }
+            ]
+          },
+          "layout_content": {
+            "key": "layout_content",
+            "name": "content_section",
+            "label": "Content Section",
+            "sub_fields": [
+              {
+                "key": "field_content_title",
+                "label": "Title",
+                "name": "title",
+                "type": "text"
+              },
+              {
+                "key": "field_content_content",
+                "label": "Content",
+                "name": "content",
+                "type": "wysiwyg",
+                "tabs": "visual",
+                "toolbar": "basic",
+                "media_upload": 0
+              }
+            ]
+          },
+          "layout_card_grid": {
+            "key": "layout_card_grid",
+            "name": "card_grid",
+            "label": "Card Grid",
+            "sub_fields": [
+              {
+                "key": "field_grid_title",
+                "label": "Title",
+                "name": "title",
+                "type": "text"
+              },
+              {
+                "key": "field_grid_cards",
+                "label": "Cards",
+                "name": "cards",
+                "type": "repeater",
+                "sub_fields": [
+                  {
+                    "key": "field_card_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                  },
+                  {
+                    "key": "field_card_content",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea"
+                  },
+                  {
+                    "key": "field_card_link",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "return_format": "array"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "page"
+        }
+      ]
+    ]
+  }
